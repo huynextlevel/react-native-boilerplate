@@ -22,7 +22,7 @@ Uses latest version of react-navigation (v6.0).
   
 ## Prerequisites
 
-- [Node](https://nodejs.org) v10 (it is recommended to install it via [NVM](https://github.com/creationix/nvm))
+- [Node](https://nodejs.org) v14 (it is recommended to install it via [NVM](https://github.com/creationix/nvm))
 - [Yarn](https://yarnpkg.com/)
 - A development machine set up for React Native by following [these instructions](https://facebook.github.io/react-native/docs/getting-started.html)
 
@@ -33,11 +33,14 @@ Uses latest version of react-navigation (v6.0).
 3. Remove `.git` folder, `rm -rf .git`
 4. Use [React Native Rename](https://github.com/junedomingo/react-native-rename) to update project name `$ npx react-native-rename <newName>`
 5. Run `yarn` to install dependencies
-6. Run `cd ios && pod install`
+6. If your laptop still use `pod` installed from `gem`. Please run:
+  - `bundle install`
+  - `cd ios && pod install`
+7. If your laptop use `pod` installed from `hombrew`. Run `cd ios && pod install`
 
-7. Start the packager with `yarn start`
-8. Connect a mobile device to your development machine
-9. Run the test application:
+8. Start the packager with `yarn start`
+9. Connect a mobile device to your development machine
+10. Run the test application:
 
 - On Android:
   - Run `react-native run-android` or Use Android Studio (Recommended)
