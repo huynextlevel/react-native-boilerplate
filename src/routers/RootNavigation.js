@@ -4,7 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack'
 
 import LoginNavigator from './LoginStack'
 import RegisterNavigator from './RegisterStack'
-import DrawerNavigator from './DrawerNavigator'
+import TabNavigator from './TabNavigator'
 import SplashScreen from 'src/screens/Splash'
 
 const Stack = createStackNavigator()
@@ -39,7 +39,7 @@ export default function NavigatorView() {
       />
       <Stack.Screen
         name="Main"
-        component={DrawerNavigator}
+        component={TabNavigator}
         options={{
           headerShown: false,
           gestureEnabled: false

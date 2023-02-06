@@ -16,7 +16,6 @@ import * as appActions from '../store/action/app'
 import { globalStyles } from '../styles/index'
 
 interface IProps {
-  route: any
   navigation: any
 }
 
@@ -27,7 +26,7 @@ const instructions = Platform.select({
     'Shake or press menu button for dev menu',
 })
 
-const Welcome = ({}: IProps) => {
+const Welcome = ({ navigation }: IProps) => {
   const dispatch = useDispatch()
   const counter = useSelector((state: RootStateOrAny) => state.app.counter)
 

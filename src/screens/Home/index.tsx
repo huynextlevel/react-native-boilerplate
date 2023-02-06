@@ -20,12 +20,7 @@ const HomeScreen: React.FC<IProps> = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <Welcome />
-      <TouchableOpacity
-        style={globalStyles.buttonContainer}
-        onPress={() => navigation.toggleDrawer()}>
-        <Text style={globalStyles.buttonTextContainer}>Open Drawer</Text>
-      </TouchableOpacity>
+      <Welcome navigation={navigation} />
       <TouchableOpacity onPress={handleGoBack}>
         <Text style={globalStyles.goBackText}>Go Back</Text>
       </TouchableOpacity>

@@ -20,11 +20,6 @@ const SettingScreen: React.FC<IProps> = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Text>SettingScreen</Text>
-      <TouchableOpacity
-        style={globalStyles.buttonContainer}
-        onPress={() => navigation.toggleDrawer()}>
-        <Text style={globalStyles.buttonTextContainer}>Open Drawer</Text>
-      </TouchableOpacity>
       <TouchableOpacity onPress={handleGoBack}>
         <Text style={globalStyles.goBackText}>Go Back</Text>
       </TouchableOpacity>
