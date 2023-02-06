@@ -1,7 +1,7 @@
-import { createStore, applyMiddleware, compose } from 'redux';
-import { createLogger } from 'redux-logger';
-import sagaMiddleware, { runSagas } from './sagas';
-import reducers from './reducers';
+import { createStore, applyMiddleware, compose } from 'redux'
+import { createLogger } from 'redux-logger'
+import sagaMiddleware, { runSagas } from './sagas'
+import reducers from './reducers'
 
 const composeEnhancers =
     (typeof window !== 'undefined' &&
@@ -9,19 +9,19 @@ const composeEnhancers =
     compose,
   logger = createLogger({
     predicate: (getState, action) => {
-      return true;
+      return true
     },
-  });
+  })
 
 export default function configureStore(initialState) {
-  const enhancers = composeEnhancers(applyMiddleware(logger, sagaMiddleware));
+  const enhancers = composeEnhancers(applyMiddleware(logger, sagaMiddleware))
 
   const store = initialState
     ? createStore(reducers, initialState, enhancers)
-    : createStore(reducers, enhancers);
+    : createStore(reducers, enhancers)
 
-  runSagas();
-  return store;
+  runSagas()
+  return store
 }
 
-export const appStore = configureStore();
+export const appStore = configureStore()

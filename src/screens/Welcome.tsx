@@ -1,26 +1,34 @@
-import React from 'react';
+import React from 'react'
 import {
   View,
   Text,
   StyleSheet,
   Platform,
   TouchableOpacity,
-} from 'react-native';
-import { useSelector, useDispatch } from 'react-redux';
+} from 'react-native'
+import {
+  useSelector,
+  useDispatch,
+  RootStateOrAny
+} from 'react-redux'
 
-import * as appActions from '../store/action/app';
-import { globalStyles } from '../styles/index';
+import * as appActions from '../store/action/app'
+import { globalStyles } from '../styles/index'
+
+interface IProps {
+  navigation: any
+}
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
   android:
     'Double tap R on your keyboard to reload,\n' +
     'Shake or press menu button for dev menu',
-});
+})
 
-const Welcome = props => {
-  const dispatch = useDispatch();
-  const counter = useSelector(({ app }) => app.counter);
+const Welcome = ({ navigation }: IProps) => {
+  const dispatch = useDispatch()
+  const counter = useSelector((state: RootStateOrAny) => state.app.counter)
 
   return (
     <View style={styles.container}>
@@ -37,24 +45,24 @@ const Welcome = props => {
         </Text>
       </TouchableOpacity>
     </View>
-  );
-};
+  )
+}
 
-export default Welcome;
+export default Welcome
 
 const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
   welcome: {
     fontSize: 20,
     textAlign: 'center',
-    margin: 10,
+    margin: 10
   },
   instructions: {
     textAlign: 'center',
     color: '#333333',
-    marginBottom: 5,
-  },
-});
+    marginBottom: 5
+  }
+})

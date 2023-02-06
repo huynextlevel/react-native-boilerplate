@@ -1,16 +1,16 @@
-import * as React from 'react';
-import { StyleSheet } from 'react-native';
-import { createStackNavigator } from '@react-navigation/stack';
+import React from 'react'
+import { StyleSheet } from 'react-native'
+import { createStackNavigator } from '@react-navigation/stack'
 
-import HomeScreen from '../screens/Home/HomeScreen';
+import HomeScreen from 'src/screens/Home'
 
-const HomeStack = createStackNavigator();
+const HomeStack = createStackNavigator()
 
 export default function HomeStackScreen() {
   return (
-    <HomeStack.Navigator initialRouteName="Home">
+    <HomeStack.Navigator initialRouteName="HomeScreen">
       <HomeStack.Screen
-        name="Home"
+        name="HomeScreen"
         component={HomeScreen}
         options={navigation => ({
           headerLeft: false,
@@ -20,7 +20,7 @@ export default function HomeStackScreen() {
         })}
       />
     </HomeStack.Navigator>
-  );
+  )
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({})

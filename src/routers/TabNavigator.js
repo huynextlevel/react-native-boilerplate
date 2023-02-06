@@ -1,13 +1,12 @@
-import React, { useEffect } from 'react';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import React from 'react'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import Icon from 'react-native-vector-icons/MaterialIcons'
 
-import { colors } from '../styles/index';
-import HomeStack from './HomeStack';
-import SettingStack from './SettingStack';
+import { colors } from 'src/styles/index'
+import HomeStack from './HomeStack'
+import SettingStack from './SettingStack'
 
-const Tab = createBottomTabNavigator();
+const Tab = createBottomTabNavigator()
 
 function TabNavigator() {
   return (
@@ -46,7 +45,7 @@ function TabNavigator() {
         })}
       />
     </Tab.Navigator>
-  );
+  )
 }
 
-export default TabNavigator;
+export default TabNavigator

@@ -1,4 +1,4 @@
-import globalStyles from './globals';
-import colors from './colors';
+import globalStyles from './globals'
+import colors from './colors'
 
 export { globalStyles, colors };

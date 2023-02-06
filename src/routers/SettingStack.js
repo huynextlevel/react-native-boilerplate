@@ -1,14 +1,14 @@
-import * as React from 'react';
-import { createStackNavigator } from '@react-navigation/stack';
-import SettingScreen from '../screens/Setting/SettingScreen';
+import * as React from 'react'
+import { createStackNavigator } from '@react-navigation/stack'
+import SettingScreen from '../screens/Setting'
 
-const SettingStack = createStackNavigator();
+const SettingStack = createStackNavigator()
 
 export default function SettingStackScreen() {
   return (
-    <SettingStack.Navigator initialRouteName="Setting">
+    <SettingStack.Navigator initialRouteName="SettingScreen">
       <SettingStack.Screen
-        name="Setting"
+        name="SettingScreen"
         component={SettingScreen}
         options={navigation => ({
           headerLeft: false,
@@ -18,5 +18,5 @@ export default function SettingStackScreen() {
         })}
       />
     </SettingStack.Navigator>
-  );
+  )
 }
