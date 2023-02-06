@@ -1,14 +1,14 @@
-import * as React from 'react';
-import { StyleSheet } from 'react-native';
-import { createStackNavigator } from '@react-navigation/stack';
+import React from 'react'
+import { StyleSheet } from 'react-native'
+import { createStackNavigator } from '@react-navigation/stack'
 
-import RegisterScreen from '../screens/Authentication/Register/RegisterScreen';
+import RegisterScreen from 'src/screens/Authentication/Register'
 
-const RegisterStack = createStackNavigator();
+const RegisterStack = createStackNavigator()
 
 export default function RegisterStackScreen() {
   return (
-    <RegisterStack.Navigator initialRouteName="Login">
+    <RegisterStack.Navigator initialRouteName="RegisterScreen">
       <RegisterStack.Screen
         name="RegisterScreen"
         component={RegisterScreen}
@@ -21,7 +21,7 @@ export default function RegisterStackScreen() {
         })}
       />
     </RegisterStack.Navigator>
-  );
+  )
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({})

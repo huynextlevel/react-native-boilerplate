@@ -1,6 +1,7 @@
-import colors from './colors';
+import { StyleSheet } from 'react-native'
+import colors from './colors'
 
-const globalStyles = {
+const globalStyles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
@@ -26,6 +27,6 @@ const globalStyles = {
     marginTop: 5,
     fontWeight: '600',
   },
-};
+})
 
-export default globalStyles;
+export default globalStyles

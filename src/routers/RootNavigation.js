@@ -1,13 +1,13 @@
-import 'react-native-gesture-handler';
-import React from 'react';
-import { createStackNavigator } from '@react-navigation/stack';
+import 'react-native-gesture-handler'
+import React from 'react'
+import { createStackNavigator } from '@react-navigation/stack'
 
-import SplashScreen from '../screens/SplashScreen';
-import LoginNavigator from './LoginStack';
-import RegisterNavigator from './RegisterStack';
-import DrawerNavigator from './DrawerNavigator';
+import LoginNavigator from './LoginStack'
+import RegisterNavigator from './RegisterStack'
+import DrawerNavigator from './DrawerNavigator'
+import SplashScreen from 'src/screens/Splash'
 
-const Stack = createStackNavigator();
+const Stack = createStackNavigator()
 
 export default function NavigatorView() {
   return (
@@ -40,8 +40,11 @@ export default function NavigatorView() {
       <Stack.Screen
         name="Main"
         component={DrawerNavigator}
-        options={{ headerShown: false, gestureEnabled: false }}
+        options={{
+          headerShown: false,
+          gestureEnabled: false
+        }}
       />
     </Stack.Navigator>
-  );
+  )
 }

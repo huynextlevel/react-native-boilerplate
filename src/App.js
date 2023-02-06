@@ -1,10 +1,10 @@
-import React from 'react';
-import { LogBox } from 'react-native';
-import { Provider } from 'react-redux';
-import { NavigationContainer } from '@react-navigation/native';
+import React from 'react'
+import { LogBox } from 'react-native'
+import { Provider } from 'react-redux'
+import { NavigationContainer } from '@react-navigation/native'
 
-import { appStore } from './store';
-import AppView from './routers/AppViewContainer';
+import { appStore } from './store'
+import AppView from './routers/AppViewContainer'
 
 LogBox.ignoreAllLogs();
 

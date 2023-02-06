@@ -1,1 +1,1 @@
-export const api = 'CLIENT_API_URL';
+export const api = 'CLIENT_API_URL'

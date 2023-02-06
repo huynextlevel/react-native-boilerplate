@@ -1,14 +1,14 @@
-import * as React from 'react';
-import { StyleSheet } from 'react-native';
-import { createStackNavigator } from '@react-navigation/stack';
+import React from 'react'
+import { StyleSheet } from 'react-native'
+import { createStackNavigator } from '@react-navigation/stack'
 
-import LoginScreen from '../screens/Authentication/Login/LoginScreen';
+import LoginScreen from 'src/screens/Authentication/Login'
 
-const LoginStack = createStackNavigator();
+const LoginStack = createStackNavigator()
 
 export default function LoginStackScreen() {
   return (
-    <LoginStack.Navigator initialRouteName="Login">
+    <LoginStack.Navigator initialRouteName="LoginScreen">
       <LoginStack.Screen
         name="LoginScreen"
         component={LoginScreen}
@@ -21,7 +21,7 @@ export default function LoginStackScreen() {
         })}
       />
     </LoginStack.Navigator>
-  );
+  )
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({})

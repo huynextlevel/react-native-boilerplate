@@ -1,9 +1,9 @@
-import React from 'react';
-import { createDrawerNavigator } from '@react-navigation/drawer';
+import React from 'react'
+import { createDrawerNavigator } from '@react-navigation/drawer'
 
-import TabNavigator from './TabNavigator';
+import TabNavigator from './TabNavigator'
 
-const Drawer = createDrawerNavigator();
+const Drawer = createDrawerNavigator()
 
 function DrawerNavigator() {
   return (
@@ -19,7 +19,7 @@ function DrawerNavigator() {
         }}
       />
     </Drawer.Navigator>
-  );
+  )
 }
 
-export default DrawerNavigator;
+export default DrawerNavigator

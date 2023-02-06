@@ -1,13 +1,15 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Text, View, TouchableOpacity } from 'react-native';
-import { useDispatch } from 'react-redux';
+import React from 'react'
+import { Text, View, TouchableOpacity } from 'react-native'
+import { useDispatch } from 'react-redux'
 
-import styles from './styles';
-import * as appActions from 'src/store/action/app';
-import { globalStyles } from 'src/styles';
+import styles from './styles'
+import {
+  IProps
+} from './types'
+import * as appActions from 'src/store/action/app'
+import { globalStyles } from 'src/styles'
 
-const SettingScreen = ({ navigation }) => {
+const SettingScreen: React.FC<IProps> = ({ navigation }) => {
   const dispatch = useDispatch();
 
   const handleGoBack = () => {
@@ -27,9 +29,7 @@ const SettingScreen = ({ navigation }) => {
         <Text style={globalStyles.goBackText}>Go Back</Text>
       </TouchableOpacity>
     </View>
-  );
-};
+  )
+}
 
-SettingScreen.propTypes = {};
-
-export default SettingScreen;
+export default SettingScreen
