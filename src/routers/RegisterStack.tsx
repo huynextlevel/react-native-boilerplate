@@ -1,27 +1,25 @@
 import React from 'react'
-import { StyleSheet } from 'react-native'
 import { createStackNavigator } from '@react-navigation/stack'
 
-import RegisterScreen from 'src/screens/Authentication/Register'
+import RegisterScreen from 'src/screens/Register'
 
 const RegisterStack = createStackNavigator()
 
-export default function RegisterStackScreen() {
+function RegisterStackScreen() {
   return (
     <RegisterStack.Navigator initialRouteName="RegisterScreen">
       <RegisterStack.Screen
         name="RegisterScreen"
         component={RegisterScreen}
-        options={navigation => ({
-          headerLeft: false,
+        options={() => ({
+          headerTitle: '',
           headerShown: false,
           gestureEnabled: false,
-          headerStyle: {},
-          headerTitle: false,
+          headerLeft: () => null,
         })}
       />
     </RegisterStack.Navigator>
   )
 }
 
-const styles = StyleSheet.create({})
+export default RegisterStackScreen
