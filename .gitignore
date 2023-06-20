@@ -31,6 +31,14 @@ local.properties
 *.hprof
 .cxx/
 
+# Android Studio
+.project
+.settings
+.classpath
+
+# Watchman
+.watchmanconfig
+
 # node.js
 #
 node_modules/
@@ -67,3 +75,24 @@ buck-out/
 /ios/Podfile.lock
 
 .env
+# Node
+node_modules
+*.log
+.nvm
+package-lock.json
+
+# Ruby Gems (Bundler)
+/vendor
+/template/vendor
+
+# Android memory profiler files
+*.hprof
+
+# Temporary files created by Metro to check the health of the file watcher
+.metro-health-check*
+
+# Additional SDKs
+/sdks/download
+/sdks/hermes
+/sdks/hermesc
+/sdks/hermes-engine/build_host_hermesc
