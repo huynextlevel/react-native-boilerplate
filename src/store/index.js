@@ -9,16 +9,14 @@ const composeEnhancers =
     compose,
   logger = createLogger({
     predicate: (getState, action) => {
-      return true
+      return (__DEV__)
     },
   })
 
-export default function configureStore(initialState) {
+export default function configureStore() {
   const enhancers = composeEnhancers(applyMiddleware(logger, sagaMiddleware))
 
-  const store = initialState
-    ? createStore(reducers, initialState, enhancers)
-    : createStore(reducers, enhancers)
+  const store = createStore(reducers, enhancers)
 
   runSagas()
   return store

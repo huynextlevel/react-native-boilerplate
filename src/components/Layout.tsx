@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { StyleSheet } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 
@@ -9,11 +8,9 @@ interface IProps {
 }
 
 const Layout = ({ children, style }: IProps) => (
-  <React.Fragment>
-    <SafeAreaView style={[styles.container, style]} edges={['right', 'left']}>
-      {children}
-    </SafeAreaView>
-  </React.Fragment>
+  <SafeAreaView style={[styles.container, style]} edges={['right', 'left']}>
+    {children}
+  </SafeAreaView>
 )
 
 const styles = StyleSheet.create({
@@ -21,10 +18,5 @@ const styles = StyleSheet.create({
     flex: 1
   }
 })
-
-Layout.propTypes = {
-  style: PropTypes.object,
-  children: PropTypes.any,
-}
 
 export default Layout

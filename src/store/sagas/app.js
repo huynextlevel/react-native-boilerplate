@@ -1,7 +1,7 @@
 import { takeEvery, put, call, all } from 'redux-saga/effects'
 import * as actions from '../actions'
 import * as appActions from '../action/app'
-import * as ApiService from '../../services/api'
+import * as ApiService from '../../services/apis'
 
 export function* loginSaga(action) {
   try {
