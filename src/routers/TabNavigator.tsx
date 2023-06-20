@@ -2,9 +2,10 @@ import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import Icon from 'react-native-vector-icons/MaterialIcons'
 
-import { colors } from 'src/styles/index'
-import HomeStack from './HomeStack'
-import SettingStack from './SettingStack'
+import { colors } from 'src/styles'
+
+import HomeScreen from 'src/screens/Home'
+import SettingScreen from 'src/screens/Setting'
 
 const Tab = createBottomTabNavigator()
 
@@ -12,13 +13,13 @@ function TabNavigator() {
   return (
     <Tab.Navigator
       initialRouteName="Home"
-      tabBarOptions={{
-        showLabel: false,
-        activeTintColor: colors.black,
+      screenOptions={{
+        tabBarShowLabel: false,
+        tabBarActiveTintColor: colors.black
       }}>
       <Tab.Screen
         name="Home"
-        component={HomeStack}
+        component={HomeScreen}
         options={({ route }) => ({
           tabBarIcon: ({ focused }) => (
             <Icon
@@ -32,7 +33,7 @@ function TabNavigator() {
       />
       <Tab.Screen
         name="Setting"
-        component={SettingStack}
+        component={SettingScreen}
         options={({ route }) => ({
           tabBarIcon: ({ focused }) => (
             <Icon
