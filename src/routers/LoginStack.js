@@ -1,25 +1,27 @@
 import React from 'react'
+import { StyleSheet } from 'react-native'
 import { createStackNavigator } from '@react-navigation/stack'
 
-import LoginScreen from 'src/screens/Login'
+import LoginScreen from 'src/screens/Authentication/Login'
 
 const LoginStack = createStackNavigator()
 
-function LoginStackScreen() {
+export default function LoginStackScreen() {
   return (
     <LoginStack.Navigator initialRouteName="LoginScreen">
       <LoginStack.Screen
         name="LoginScreen"
         component={LoginScreen}
-        options={() => ({
-          headerTitle: '',
+        options={navigation => ({
+          headerLeft: false,
           headerShown: false,
           gestureEnabled: false,
-          headerLeft: () => null,
+          headerStyle: {},
+          headerTitle: false,
         })}
       />
     </LoginStack.Navigator>
   )
 }
 
-export default LoginStackScreen
+const styles = StyleSheet.create({})
